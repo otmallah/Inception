@@ -1,0 +1,24 @@
+Internet : The internet is a global network of computers and other devices connected by communication protocols, which allow for the exchange of information and data in the form of text, images, videos, and other forms of media. The internet enables the widespread sharing of information and communication across the world, facilitating many aspects of modern life, including business, education, entertainment, and social interaction.
+
+x
+HOW THE INTERNET WORK : The Internet works by transmitting data from one device to another through a network of connected devices. This is done using standardized communication protocols, such as the Transmission Control Protocol (TCP) and the Internet Protocol (IP).  
+ The Internet can be seen as having two major components: network protocols and hardware. The protocols, such as the TCP/IP suite, present sets of rules that devices must follow in order to complete tasks. Without this common collection of rules, machines would not be able to communicate.
+
+The protocols are also responsible for translating the alphabetic text of a message into electronic signals that can be transmitted over the Internet, and then back again into legible, alphabetic text.
+
+Hardware, the second major component of the Internet, includes everything from the computer or smartphone that is used to access the Internet to the cables that carry information from one device to another. Additional types of hardware include satellites, radios, cell phone towers, routers and servers.
+
+These various types of hardware are the connections within the network. Devices such as computers, smartphones and laptops are end points, or clients, while the machines that store the information are the servers. The transmission lines that exchange the data can either be wireless signals from satellites or 4G and cell phone towers, or physical lines, such as cables and fiber optics.
+
+The process of transferring information from one device to another relies on packet switching. Each computer connected to the Internet is assigned a unique IP address that allows the device to be recognized. When one device attempts to send a message to another device, the data is sent over the Internet in the form of manageable packets. Each packet is assigned a port number that will connect it to its endpoint.
+A packet that has both a unique IP address and port number can be translated from alphabetic text into electronic signals by travelling through the layers of the OSI model from the top application layer to the bottom physical layer. The message will then be sent over the Internet where it is received by the Internet service provider's (ISP) router. The router will examine the destination address assigned to each packet and determine where to send it.
+
+Eventually, the packet reaches the client and travels in reverse from the bottom physical layer of the OSI model to the top application layer. During this process, the routing data -- the port number and IP address -- is stripped from the packet, thus allowing the data to be translated back into alphabetic text and completing the transmission process.
+
+/////
+
+- how docker work 
+- lhadafe mn docker 
+- containers
+- how conatier work
+- why need containers
