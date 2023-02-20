@@ -30,3 +30,7 @@ start().catch(err => {
   console.log(err);
   process.exit(1);
 });
+
+http://dl-cdn.alpinelinux.org/alpine/edge/main
+http://dl-cdn.alpinelinux.org/alpine/edge/community
+http://dl-cdn.alpinelinux.org/alpine/edge/testing
