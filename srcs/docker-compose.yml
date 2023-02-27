@@ -1,0 +1,16 @@
+version: "3"
+services:
+  nginx:
+    build: ./requirements/nginx
+    image: nginx
+    command : tail -f /dev/null
+    ports:
+      - 443:443
+  wordpress:
+    build: ./requirements/wordpress
+    image: wordpress
+    command : tail -f /dev/null
+    depends_on:
+      - nginx
+    ports:
+      - 80:80
