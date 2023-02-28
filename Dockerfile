@@ -20,6 +20,6 @@ COPY nginx.conf /etc/nginx/http.d/default.conf
 COPY mariadb.sh .
 
 
-ENTRYPOINT ["sh", "mariadb.sh"]
+#ENTRYPOINT ["sh", "mariadb.sh"]
 
-cmd ["sh"]
+cmd ["sh", "mariadb.sh"  , "sh"]

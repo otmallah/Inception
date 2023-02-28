@@ -12,4 +12,4 @@ COPY host.crt /etc/nginx/ssl/myhostname.crt
 COPY host.key /etc/nginx/ssl/myhostname.key 
 COPY nginx.conf /etc/nginx/http.d/default.conf
 
-cmd ["sh"]
+cmd ["nginx", "-g", "daemon off;"]
