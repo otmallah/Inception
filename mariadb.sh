@@ -5,6 +5,7 @@
 mariadb -e "CREATE DATABASE wordpress" 
 mariadb -e "GRANT ALL PRIVILEGES ON wordpress.* TO 'otmallah'@'localhost' IDENTIFIED BY 'pass'; " 
 mariadb -e "FLUSH PRIVILEGES"
+cd wordpress
 rm wp-config.php 
 wp config create --dbname=wordpress --dbuser=otmallah --dbpass=pass
 /etc/init.d/php-fpm81 start

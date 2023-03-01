@@ -12,7 +12,7 @@ run apk update && apk add mysql  mysql-client && \
       curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
       chmod +x wp-cli.phar && \
       mv wp-cli.phar /usr/local/bin/wp && \
-      wp core download 
+      mkdir -p wordpress && cd wordpress && wp core download && cd ..
 
 COPY host.crt /etc/nginx/ssl/myhostname.crt 
 COPY host.key /etc/nginx/ssl/myhostname.key 
