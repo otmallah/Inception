@@ -8,4 +8,4 @@ copy mariadb-server.cnf /etc/my.cnf.d
 
 ENTRYPOINT ["sh", "mariadb.sh"]
 
-cmd ["mysqld", "--user=root"]
+cmd ["mysqld" , "--user=root"]

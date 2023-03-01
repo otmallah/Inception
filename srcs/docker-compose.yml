@@ -1,26 +1,29 @@
 version: "2"
 services:
   nginx:
+    depends_on:
+      - wordpress
     build: ./requirements/nginx
     image: nginx
     ports:
       - 443:443
     volumes:
       - myapp:/wordpress
-    depends_on:
-      - wordpress
+    restart: always
   mariadb:
     build: ./requirements/mariadb
     image: mariadb
     volumes:
       - myapp:/wordpress
+    restart: always
   wordpress:
+    depends_on:
+      - mariadb
     build: ./requirements/wordpress
     image: wordpress
     volumes:
       - myapp:/wordpress
-    depends_on:
-      - mariadb
+    restart: always
 volumes:
   myapp:
 networks:
