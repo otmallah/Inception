@@ -7,8 +7,10 @@ services:
     image: nginx
     ports:
       - 443:443
+      - 80:80
     volumes:
-      - myapp:/wordpress
+      - myapp:/home/otmallah/data/wordpress
+      - mysite:/page
     restart: always
     env_file:
       - ../.env
@@ -28,10 +30,19 @@ services:
     build: ./requirements/wordpress
     image: wordpress
     volumes:
-      - myapp:/wordpress
+      - myapp:/home/otmallah/data/wordpress
     restart: always
+  site:
+    depends_on:
+      - nginx
+    build: ./requirements/bonus/simple_site
+    image : simple_site
+    volumes:
+      - mysite:/page
+    restart : always
 volumes:
   myapp:
   mydata:
+  mysite:
 networks:
   default:

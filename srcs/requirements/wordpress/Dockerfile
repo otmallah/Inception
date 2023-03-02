@@ -14,4 +14,4 @@ copy www.conf /etc/php81/php-fpm.d
 
 ENTRYPOINT ["sh" ,"wordpress.sh"]
 
-cmd [ "tail" , "-F"]
+cmd [ "php-fpm81" , "-F"]

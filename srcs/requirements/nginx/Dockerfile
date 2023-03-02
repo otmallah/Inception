@@ -5,7 +5,7 @@ run apk add nginx && \
       apk add openssl && \
       apk add openrc &&  openrc && touch /run/openrc/softlevel && \
       mkdir -p /etc/nginx/ssl && \
-      nginx
+      nginx 
 
 COPY host.crt /etc/nginx/ssl/myhostname.crt 
 COPY host.key /etc/nginx/ssl/myhostname.key 
