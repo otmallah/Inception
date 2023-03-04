@@ -7,7 +7,8 @@ services:
     image: nginx
     ports:
       - 443:443
-      - 80:80
+      - 82:82
+      - 81:81
     volumes:
       - myapp:/home/otmallah/data/wordpress
       - mysite:/page
@@ -22,6 +23,14 @@ services:
     restart: always
     env_file:
       - ../.env
+  # redis:
+  #   depends_on:
+  #     - wordpress
+  #   image: redis
+  #   build : ./requirements/bonus/redis
+  #   restart : always
+  #   volumes:
+  #     - myapp:/home/otmallah/data/wordpress
   wordpress:
     depends_on:
       - mariadb
@@ -40,6 +49,12 @@ services:
     volumes:
       - mysite:/page
     restart : always
+  adminer:
+    build: ./requirements/bonus/adminer
+    restart: always
+    image: adminer
+    ports:
+      - 8080:80
 volumes:
   myapp:
   mydata:

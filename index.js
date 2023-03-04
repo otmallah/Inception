@@ -34,3 +34,6 @@ start().catch(err => {
 http://dl-cdn.alpinelinux.org/alpine/edge/main
 http://dl-cdn.alpinelinux.org/alpine/edge/community
 http://dl-cdn.alpinelinux.org/alpine/edge/testing
+
+php7.4-cli \
+		php8-fpm  php8-mbstring  php8-mysql php8-odbc  php8-pdo-dblib php8-pgsql php8-sqlite3 
