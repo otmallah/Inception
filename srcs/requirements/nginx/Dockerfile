@@ -4,8 +4,7 @@ run apk add nginx && \
       apk add vim && \
       apk add openssl && \
       apk add openrc &&  openrc && touch /run/openrc/softlevel && \
-      mkdir -p /etc/nginx/ssl && \
-      nginx 
+      mkdir -p /etc/nginx/ssl 
 
 run wget https://github.com/vrana/adminer/releases/latest/download/adminer-4.8.1.php -O /var/www/localhost/htdocs/adminer.php
 
@@ -17,4 +16,4 @@ copy nginx.sh .
 
 ENTRYPOINT ["sh" , "nginx.sh"]
 
-cmd ["tail", "-f"]
+cmd ["tail" , "-f"]

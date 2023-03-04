@@ -23,6 +23,12 @@ services:
     restart: always
     env_file:
       - ../.env
+  ctop :
+    build : ./requirements/bonus/ctop
+    image: ctop
+    restart : always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
   # redis:
   #   depends_on:
   #     - wordpress
