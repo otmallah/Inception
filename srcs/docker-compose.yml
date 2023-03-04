@@ -57,7 +57,17 @@ services:
       - 8080:80
 volumes:
   myapp:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/otmallah/data/wordpress
+      o: bind
   mydata:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/otmallah/data/mysql
   mysite:
 networks:
   default:
