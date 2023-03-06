@@ -29,14 +29,19 @@ services:
     restart : always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-  # redis:
-  #   depends_on:
-  #     - wordpress
-  #   image: redis
-  #   build : ./requirements/bonus/redis
-  #   restart : always
-  #   volumes:
-  #     - myapp:/home/otmallah/data/wordpress
+  ftp :
+    build : ./requirements/bonus/ftp
+    image: ftp
+    restart : always
+    ports :
+      - 20:20
+      - 21:21
+    volumes:
+      - myapp:/home/otmallah/data/wordpress
+  redis:
+    image: redis
+    build : ./requirements/bonus/redis
+    restart : always  
   wordpress:
     depends_on:
       - mariadb
@@ -77,3 +82,4 @@ volumes:
   mysite:
 networks:
   default:
+

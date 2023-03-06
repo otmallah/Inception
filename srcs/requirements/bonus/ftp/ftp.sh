@@ -1,0 +1,2 @@
+service vsftpd start
+echo $@
