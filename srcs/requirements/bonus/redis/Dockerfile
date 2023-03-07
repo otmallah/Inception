@@ -6,4 +6,4 @@ RUN touch /run/openrc/softlevel
 RUN rc-service redis start
 RUN sed -i 's/bind 127.0.0.1 -::1/bind 0.0.0.0 -::1/' /etc/redis.conf
 
-CMD ["tail" , "-f"]
+CMD ["redis-server"]

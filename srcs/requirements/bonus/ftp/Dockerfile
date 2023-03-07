@@ -7,10 +7,7 @@ copy vsftpd.conf .
 COPY ftp.sh .
 
 RUN cat vsftpd.conf > /etc/vsftpd.conf
-RUN useradd -m -p pass otmallah
+RUN useradd -m -p 1234  otmallah
 RUN service vsftpd start
-RUN yes | apt-get install nginx
 
-ENTRYPOINT ["sh" , "ftp.sh"]
-
-CMD ["tail" , "-f"]
+CMD ["vsftpd" , "/etc/vsftpd.conf"]

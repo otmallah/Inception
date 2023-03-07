@@ -1,3 +1,5 @@
 #!/bin/sh
-service vsftpd start
+passwd otmallah
+passwd
+passwd
 echo $@
