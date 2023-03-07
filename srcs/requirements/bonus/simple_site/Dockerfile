@@ -1,8 +1,8 @@
-from alpine:3.17.0
+FROM alpine:3.17.0
 
-run apk update && apk add vim && mkdir page
+RUN apk update && apk add vim && mkdir page
 
-copy simple_site.html /page
-copy style.css /page
+COPY simple_site.html /page
+COPY style.css /page
 
-cmd ["tail" , "-f"]
+CMD ["tail" , "-f"]

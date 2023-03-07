@@ -1,9 +1,9 @@
-from alpine:3.17
+FROM alpine:3.17
 
-run apk update && apk add redis
-run apk add openrc && openrc
-run touch /run/openrc/softlevel
-run rc-service redis start
-run sed -i 's/bind 127.0.0.1 -::1/bind 0.0.0.0 -::1/' /etc/redis.conf
+RUN apk update && apk add redis
+RUN apk add openrc && openrc
+RUN touch /run/openrc/softlevel
+RUN rc-service redis start
+RUN sed -i 's/bind 127.0.0.1 -::1/bind 0.0.0.0 -::1/' /etc/redis.conf
 
-cmd ["tail" , "-f"]
+CMD ["tail" , "-f"]

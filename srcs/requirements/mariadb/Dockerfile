@@ -1,11 +1,11 @@
-from alpine:3.17.0
+FROM alpine:3.17.0
 
-run apk update && apk add  openrc mysql  mysql-client  php-mysqli
-run openrc && touch /run/openrc/softlevel 
+RUN apk update && apk add  openrc mysql  mysql-client  php-mysqli
+RUN openrc && touch /run/openrc/softlevel 
 
-copy mariadb.sh .
-copy mariadb-server.cnf /etc/my.cnf.d
+COPY mariadb.sh .
+COPY mariadb-server.cnf /etc/my.cnf.d
 
 ENTRYPOINT ["sh", "mariadb.sh"]
 
-cmd ["mysqld" , "--user=root"]
+CMD ["mysqld" , "--user=root"]

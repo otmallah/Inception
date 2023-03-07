@@ -17,14 +17,10 @@ Eventually, the packet reaches the client and travels in reverse from the bottom
 
 /////
 
-- how docker work 
-- why we use docker 
-- containers
-- how conatier work
-- why need containers
-
-
-
+- set pass to mysql root
+- creatw two users
+- remove tail -f
+- Makefile
 
 
 
