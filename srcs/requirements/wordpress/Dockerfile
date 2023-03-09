@@ -7,9 +7,9 @@ RUN apk update && apk add vim openrc php-fpm php-mysqli curl php php-curl php-js
       mkdir -p  /home/otmallah/data/wordpress && cd /home/otmallah/data/wordpress && wp core download && cd /
 
 RUN openrc && touch /run/openrc/softlevel
-COPY wp-config.php /home/otmallah/data/wordpress
-COPY wordpress.sh .
-COPY www.conf /etc/php81/php-fpm.d
+COPY ./tools/wp-config.php /home/otmallah/data/wordpress
+COPY ./tools/wordpress.sh .
+COPY ./tools/www.conf /etc/php81/php-fpm.d
 
 ENTRYPOINT ["sh" ,"wordpress.sh"]
 

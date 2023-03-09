@@ -14,7 +14,7 @@ services:
       - mysite:/page
     restart: always
     env_file:
-      - ../.env
+      - ./.env
   mariadb:
     build: ./requirements/mariadb
     image: mariadb
@@ -22,7 +22,7 @@ services:
       - mydata:/var/lib/mysql
     restart: always
     env_file:
-      - ../.env
+      - ./.env
   ctop :
     tty: true
     build : ./requirements/bonus/ctop
@@ -32,7 +32,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
   ftp :
     env_file:
-      - ../.env
+      - ./.env
     build : ./requirements/bonus/ftp
     image: ftp
     restart : always
@@ -49,7 +49,7 @@ services:
     depends_on:
       - mariadb
     env_file:
-      - ../.env
+      - ./.env
     build: ./requirements/wordpress
     image: wordpress
     volumes:
